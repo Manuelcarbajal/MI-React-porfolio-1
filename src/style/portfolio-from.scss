@@ -1,0 +1,14 @@
+.portfolio-from-wrapper{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-gap:21px;
+    padding:42px;
+
+    @include input-element();
+
+    .image-uploaders{
+        @include base-grid();
+        grid-template-columns: 200px 200px 200px;
+        
+    }
+}
