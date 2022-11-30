@@ -1,22 +1,23 @@
 import "../style/main.scss";
 import React, { Component } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route,useParams} from "react-router-dom";
 import axios from "axios";
 import { library } from "@fortawesome/fontawesome-svg-core";
 // import { FortAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash, faSignOutAlt,faEdit } from "@fortawesome/free-solid-svg-icons";
+import { faTrash, faSignOutAlt,faEdit,faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 import NavigationContainer from "./navigation/navigation-container";
 import Home from "./pages/home";
 import About from "./pages/about";
 import Contact from "./pages/contact";
 import Blog from "./pages/blog";
+import BlogDetail from "./pages/blog-detail";
 import PortfolioDetail from "./portfolio/portfolio-detail";
 import PortfolioManager from "./portfolio/portfolio-manager";
 import Auth from "./pages/auth";
 import NoMatch from "./pages/no-match";
 
-library.add(faTrash,faSignOutAlt ,faEdit)
+library.add(faTrash,faSignOutAlt ,faEdit,faSpinner)
 
 
 export default class App extends Component {
@@ -107,6 +108,7 @@ export default class App extends Component {
               <Route path="/about-me" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path="/b/:slug" element={<BlogDetail/>} />
               {this.state.loggedInStatus === "LOGGED_IN"
                 ? this.authorizedPage()
                 : null}
