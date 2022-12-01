@@ -1,0 +1,9 @@
+
+.blog-from-wrapper{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-gap:21px;
+    padding:42px;
+
+    @include input-element();
+}
