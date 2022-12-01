@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios'
+import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
 
@@ -8,9 +8,10 @@ class BlogDetail extends Component {
     constructor(props){
         super(props);
         
-        
+         
+
         this.state = {
-            currentId : this.props.match.params.slug,
+            currentId : this.props.theParams.slug,
             blogItem:{}
         }
     }
