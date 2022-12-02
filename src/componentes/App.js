@@ -14,7 +14,7 @@ import PortfolioDetail from "./portfolio/portfolio-detail";
 import PortfolioManager from "./portfolio/portfolio-manager";
 import Auth from "./pages/auth";
 import NoMatch from "./pages/no-match";
-import Icons from "./helpers/icons"
+import Icons from "../helpers/icons"
 
 
 
